@@ -10,8 +10,8 @@
 
     <FrameLayout
         android:id="@+id/frmLoginBackground"
-        android:layout_width="247dp"
-        android:layout_height="386dp"
+        android:layout_width="223dp"
+        android:layout_height="372dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -20,10 +20,10 @@
         android:background="@drawable/round_shape_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387">
+        app:layout_constraintVertical_bias="0.497">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -31,63 +31,62 @@
 
             <ImageView
                 android:id="@+id/imgLoginLogo"
-                android:layout_width="166dp"
-                android:layout_height="51dp"
+                android:layout_width="182dp"
+                android:layout_height="53dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="39dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="38dp"
-                android:layout_marginBottom="295dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="293dp"
                 app:srcCompat="@drawable/ic_lpay" />
 
             <EditText
                 android:id="@+id/edtLoginPhoneNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="189dp"
+                android:layout_height="39dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="180dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="156dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="144dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="185dp"
                 android:ems="10"
                 android:hint="Phone Number"
                 android:inputType="phone" />
 
             <EditText
                 android:id="@+id/edtLoginPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="188dp"
+                android:layout_height="40dp"
+                android:layout_alignStart="@+id/edtLoginPhoneNumber"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="234dp"
-                android:layout_marginBottom="103dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginBottom="138dp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btnLoginLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="81dp"
+                android:layout_height="31dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="312dp"
-                android:layout_marginEnd="75dp"
-                android:layout_marginBottom="22dp"
-                android:text="LOGIN"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="289dp"
+                android:layout_marginEnd="68dp"
+                android:layout_marginBottom="48dp"
                 android:background="@drawable/my_button_purple"
-                android:textColor="#ffffff"
-                />
+                android:text="LOGIN"
+                android:textColor="@color/colorWhite" />
 
         </RelativeLayout>
 

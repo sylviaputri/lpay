@@ -41,7 +41,7 @@
             android:layout_marginTop="60dp"
             android:text="Rp 536.000,00"
             android:textSize="30sp"
-            tools:textColor="@android:color/holo_orange_light" />
+            tools:textColor="@color/colorLightOrange" />
     </FrameLayout>
 
     <ImageView

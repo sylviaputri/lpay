@@ -15,7 +15,8 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Saldo Rp" />
+        android:text="Saldo Rp"
+        android:textColor="@color/colorWhite"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +24,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Rp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/editText"
@@ -43,7 +47,9 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select payment method" />
+        android:text="Select payment method"
+        android:textColor="@color/colorWhite"/>
+
 
 
 </LinearLayout>

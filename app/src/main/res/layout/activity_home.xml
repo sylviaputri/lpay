@@ -70,7 +70,30 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"></LinearLayout>
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/btnNavHomeHome"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_home_white_24dp" />
+
+        <ImageView
+            android:id="@+id/btnNavHistoryHome"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_history_white_24dp" />
+
+        <ImageView
+            android:id="@+id/btnNavSettingHome"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_settings_white_24dp" />
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/btnHomeTopUp"

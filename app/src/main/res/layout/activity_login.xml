@@ -4,20 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/background_purple_gradient"
     tools:context=".LoginActivity">
 
 
     <FrameLayout
         android:id="@+id/frmLoginBackground"
-        android:layout_width="223dp"
-        android:layout_height="372dp"
+        android:layout_width="269dp"
+        android:layout_height="400dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
 
-        android:background="@drawable/round_shape_border"
+        android:background="@drawable/mix_shape_border_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -26,69 +24,123 @@
         app:layout_constraintVertical_bias="0.497">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="301dp"
+            android:layout_height="367dp">
 
             <ImageView
                 android:id="@+id/imgLoginLogo"
-                android:layout_width="182dp"
-                android:layout_height="53dp"
+                android:layout_width="128dp"
+                android:layout_height="102dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginBottom="293dp"
-                app:srcCompat="@drawable/ic_lpay" />
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="106dp"
+                android:layout_marginBottom="252dp"
+                app:layout_constraintBottom_toTopOf="@+id/frmLoginBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_l_pay_chat" />
 
             <EditText
                 android:id="@+id/edtLoginPhoneNumber"
-                android:layout_width="189dp"
-                android:layout_height="39dp"
+                android:layout_width="193dp"
+                android:layout_height="43dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="144dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="185dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="145dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="179dp"
+                android:backgroundTint="@color/colorWhite"
                 android:ems="10"
                 android:hint="Phone Number"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:shadowColor="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColorHint="@color/cardview_shadow_start_color"
+                android:textColorLink="@color/colorWhite" />
 
             <EditText
                 android:id="@+id/edtLoginPassword"
-                android:layout_width="188dp"
-                android:layout_height="40dp"
+                android:layout_width="193dp"
+                android:layout_height="46dp"
                 android:layout_alignStart="@+id/edtLoginPhoneNumber"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="190dp"
-                android:layout_marginBottom="138dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="232dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="89dp"
+                android:backgroundTint="@color/colorWhite"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:shadowColor="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColorHint="@color/cardview_shadow_start_color"
+                android:textColorLink="@color/colorWhite" />
 
             <Button
                 android:id="@+id/btnLoginLogin"
-                android:layout_width="81dp"
-                android:layout_height="31dp"
+                android:layout_width="119dp"
+                android:layout_height="33dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="289dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="48dp"
-                android:background="@drawable/my_button_purple"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="334dp"
+                android:layout_marginEnd="115dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/my_button_transparant_border_white"
                 android:text="LOGIN"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frmLoginBackground" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="46dp"
+                android:layout_height="38dp"
+                android:layout_alignEnd="@+id/edtLoginPhoneNumber"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="146dp"
+                android:layout_marginEnd="199dp"
+                android:layout_marginBottom="183dp"
+                app:srcCompat="@drawable/ic_phone_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="46dp"
+                android:layout_height="47dp"
+                android:layout_alignEnd="@+id/edtLoginPhoneNumber"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="199dp"
+                android:layout_marginBottom="90dp"
+                app:srcCompat="@drawable/ic_lock_white_24dp" />
 
         </RelativeLayout>
 
     </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

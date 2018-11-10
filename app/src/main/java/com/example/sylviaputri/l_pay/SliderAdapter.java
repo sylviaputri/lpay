@@ -20,13 +20,15 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.ic_lpay,
-            R.drawable.ic_payment_bca
+            R.drawable.ic_payment_cimb,
+            R.drawable.ic_payment_bca,
+            R.drawable.ic_payment_bni
     };
 
     public String[] slide_headings={
             "E-Pay",
-            "Bayar"
+            "Bayar",
+            "Terakhir"
     };
 
     @Override

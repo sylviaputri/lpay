@@ -33,5 +33,87 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="18sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="My Saldo"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Rp 5.000.0000,00"
+            android:textAlignment="center"
+            android:textColor="@color/colorLightOrange"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="visible"
+            android:background="#AAA"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="30dp" >
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="341dp"
+                android:layout_height="57dp"
+                android:ems="10"
+                android:inputType="number"
+                android:lines="@android:integer/config_longAnimTime"
+                android:text="Enter Top Up Amount"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimal saldo Rp 50.000,00"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="visible"
+            android:background="#AAA" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:background="@color/colorGrey">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Select Payment"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="339dp"
+                android:layout_height="wrap_content"
+                android:text="RadioButton" />
+
+        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

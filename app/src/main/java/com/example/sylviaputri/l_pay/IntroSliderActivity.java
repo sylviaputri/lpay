@@ -34,7 +34,7 @@ public class IntroSliderActivity extends AppCompatActivity {
     }
 
     public void addDotsIndicator(int position) {
-        mDots = new  TextView[2];
+        mDots = new  TextView[3];
         mDotsLayout.removeAllViews();
 
         for (int i = 0; i<mDots.length;i++){

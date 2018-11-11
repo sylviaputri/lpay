@@ -85,7 +85,14 @@
                 android:text="Minimal saldo Rp 50.000,00"
                 android:textStyle="italic" />
         </LinearLayout>
+      
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="visible"
+            android:background="#AAA" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <View
             android:layout_width="match_parent"
@@ -100,6 +107,8 @@
             android:orientation="vertical"
             android:background="@color/colorGrey">
 =======
+=======
+>>>>>>> 5249dc9e4c100d7e54db4462140f62fe6a3c7b7e
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -108,6 +117,7 @@
         android:orientation="vertical"
         android:background="@color/colorGrey">
 
+<<<<<<< HEAD
         <TextView
             android:id="@+id/textView3"
             android:layout_width="342dp"
@@ -116,10 +126,12 @@
             android:text="Select Payment"
             android:textSize="18sp" />
 >>>>>>> master
+=======
+>>>>>>> 5249dc9e4c100d7e54db4462140f62fe6a3c7b7e
 
             <TextView
                 android:id="@+id/txtTopUpPayment"
-                android:layout_width="match_parent"
+                android:layout_width="342dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Select Payment"

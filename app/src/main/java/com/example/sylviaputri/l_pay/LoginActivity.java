@@ -1,22 +1,39 @@
 package com.example.sylviaputri.l_pay;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
-    public FrameLayout frmLoginBackground;
-    public ImageView imgLoginLogo;
+    public Button btnLoginLogin;
+    public Button btnLoginRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        frmLoginBackground = findViewById(R.id.frmLoginBackground);
-        imgLoginLogo = findViewById(R.id.imgLoginLogo);
+        btnLoginLogin = (Button) findViewById(R.id.btnLoginLogin);
+        btnLoginRegister = (Button) findViewById(R.id.btnLoginRegister);
 
+        btnLoginRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        //LOGIN sementara (tanpa pengecekan nomor&password)
+        btnLoginLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

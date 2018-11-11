@@ -25,9 +25,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //LOGIN sementara (tanpa pengecekan nomor&password)
+        btnLoginLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private void goingToRegisterPage(){
-
-    }
 }

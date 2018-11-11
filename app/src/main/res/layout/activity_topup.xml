@@ -86,6 +86,7 @@
                 android:textStyle="italic" />
         </LinearLayout>
 
+<<<<<<< HEAD
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -98,6 +99,23 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@color/colorGrey">
+=======
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:orientation="vertical"
+        android:background="@color/colorGrey">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Select Payment"
+            android:textSize="18sp" />
+>>>>>>> master
 
             <TextView
                 android:id="@+id/txtTopUpPayment"

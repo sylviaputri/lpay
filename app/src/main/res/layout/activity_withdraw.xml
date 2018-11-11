@@ -13,29 +13,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/cardview_light_background"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btnWithDrawBack"
+                android:id="@+id/txtWithdrawBack"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/cardview_light_background"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <TextView
-                android:id="@+id/txtWithDrawTitle"
+                android:id="@+id/txtWithdrawTitle"
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:paddingTop="12dp"
-                android:text="With Draw"
+                android:text="Withdraw"
                 android:textAlignment="inherit"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/cardview_dark_background"
                 android:textSize="18sp" />
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="visible"
+            android:background="#AAA" />
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtWithdrawTitleSaldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -43,7 +49,7 @@
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtWithdrawSaldo"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:text="Rp 5.000.0000,00"
@@ -68,20 +74,20 @@
             android:paddingBottom="30dp" >
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/txtWithdrawAmount"
                 android:layout_width="341dp"
-                android:layout_height="57dp"
+                android:layout_height="64dp"
                 android:ems="10"
                 android:inputType="number"
                 android:lines="@android:integer/config_longAnimTime"
-                android:text="Enter Top Up Amount"
+                android:text="Enter Withdraw Amount"
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/txtWithdrawMinimum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Minimal saldo Rp 50.000,00"
+                android:text="Minimal Rp 50.000,00"
                 android:textStyle="italic" />
         </LinearLayout>
 
@@ -94,14 +100,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="20dp"
-            android:paddingTop="15dp"
+            android:layout_height="258dp"
+            android:background="@color/colorGrey"
             android:orientation="vertical"
-            android:background="@color/colorGrey">
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txtWithdrawTitlePayment"
                 android:layout_width="342dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -109,11 +115,31 @@
                 android:textSize="18sp" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/btnWithdrawPayment1"
                 android:layout_width="339dp"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="BCA - 6042893554" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BNI - 0451827648" />
 
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/BtnWithdrawSubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:text="Withdraw"
+                android:textColor="@color/cardview_light_background" />
+
+        </RelativeLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

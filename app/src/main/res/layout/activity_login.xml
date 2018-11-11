@@ -39,7 +39,6 @@
                 android:layout_marginTop="13dp"
                 android:layout_marginEnd="106dp"
                 android:layout_marginBottom="252dp"
-                app:layout_constraintBottom_toTopOf="@+id/frmLoginBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -99,17 +98,16 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="98dp"
-                android:layout_marginTop="292dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginBottom="83dp"
+                android:layout_marginStart="87dp"
+                android:layout_marginTop="293dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="82dp"
                 android:background="@drawable/my_button_transparant_border_white"
                 android:text="LOGIN"
                 android:textColor="@color/colorWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frmLoginBackground" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView2"

@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/btnNavHomeHome"
+            android:id="@+id/imgNavHomeHome"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -79,7 +79,7 @@
             app:srcCompat="@drawable/ic_home_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavHistoryHome"
+            android:id="@+id/imgNavHomeHistory"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -87,7 +87,7 @@
             app:srcCompat="@drawable/ic_history_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavSettingHome"
+            android:id="@+id/imgNavHomeSetting"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"

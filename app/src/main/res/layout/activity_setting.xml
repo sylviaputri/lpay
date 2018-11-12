@@ -123,7 +123,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnSettingLogout"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -131,13 +131,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorgreen"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
         android:text="Log Out"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/primary_text_light"
         android:textStyle="bold"
-        android:bottomRightRadius="10dp"
-        android:bottomLeftRadius="10dp"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/btnNavHomeHome"
+            android:id="@+id/imgNavSettingHome"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -168,7 +168,7 @@
             app:srcCompat="@drawable/ic_home_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavHistoryHome"
+            android:id="@+id/imgNavSettingHistory"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -176,7 +176,7 @@
             app:srcCompat="@drawable/ic_history_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavSettingHome"
+            android:id="@+id/imgNavSettingSetting"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"

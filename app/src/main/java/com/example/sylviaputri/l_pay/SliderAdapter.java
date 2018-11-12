@@ -21,9 +21,9 @@ public class SliderAdapter extends PagerAdapter{
     }
 
     public int[] slide_images={
-            R.drawable.ic_toko_cookies,
-            R.drawable.ic_l_pay_chat,
-            R.drawable.ic_payment_bca
+            R.drawable.ic_slider_store,
+            R.drawable.ic_slider_e_pay,
+            R.drawable.ic_slider_cart
     };
 
     public String[] slide_headings = {

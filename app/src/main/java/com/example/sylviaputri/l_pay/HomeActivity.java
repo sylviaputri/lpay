@@ -40,6 +40,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        btnHomeScanQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ScanQRActivity.class);
+                startActivity(intent);
+            }
+        });
+
         imgNavHomeSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

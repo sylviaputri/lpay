@@ -19,6 +19,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".TopupActivity" />
+        <activity android:name=".WithdrawActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

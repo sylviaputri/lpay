@@ -27,15 +27,15 @@ public class SliderAdapter extends PagerAdapter{
     };
 
     public String[] slide_headings = {
-            "Cookies",
-            "Topup",
-            "Tarik Tunai"
+            "Shopping becomes FUN",
+            "Goodbye Heavy Wallet",
+            "FAST Transaction"
     };
 
     public String[] slide_descs = {
-            "Cookies e wes mateng",
-            "Topup nambah saldo cyin",
-            "Tarik tunai biar uang bisa dipake belanja"
+            "The easiest way to order everything from your favourite store",
+            "Shopping only needs to bring your smartphone",
+            "Don't need to count money when paying, don't need to wait for change"
     };
 
     @Override

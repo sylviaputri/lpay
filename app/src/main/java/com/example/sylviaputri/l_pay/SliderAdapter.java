@@ -10,25 +10,32 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class SliderAdapter extends PagerAdapter {
+import org.w3c.dom.Text;
 
+public class SliderAdapter extends PagerAdapter{
     Context context;
     LayoutInflater layoutInflater;
 
-    public  SliderAdapter(Context context){
+    public SliderAdapter(Context context){
         this.context = context;
     }
 
-    public int[] slide_images = {
-            R.drawable.ic_payment_cimb,
-            R.drawable.ic_payment_bca,
-            R.drawable.ic_payment_bni
+    public int[] slide_images={
+            R.drawable.ic_toko_cookies,
+            R.drawable.ic_l_pay_chat,
+            R.drawable.ic_payment_bca
     };
 
-    public String[] slide_headings={
-            "E-Pay",
-            "Bayar",
-            "Terakhir"
+    public String[] slide_headings = {
+            "Cookies",
+            "Topup",
+            "Tarik Tunai"
+    };
+
+    public String[] slide_descs = {
+            "Cookies e wes mateng",
+            "Topup nambah saldo cyin",
+            "Tarik tunai biar uang bisa dipake belanja"
     };
 
     @Override
@@ -41,16 +48,19 @@ public class SliderAdapter extends PagerAdapter {
         return view == (RelativeLayout) o;
     }
 
+    @NonNull
     @Override
-    public Object instantiateItem(ViewGroup container, int position){
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.activity_intro_slider_1, container, false);
+        View view = layoutInflater.inflate(R.layout.activity_slider_content, container, false);
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
         TextView slideHeading = (TextView) view.findViewById(R.id.slide_heading);
+        TextView slideDescription = (TextView) view.findViewById(R.id.slide_desc);
 
         slideImageView.setImageResource(slide_images[position]);
         slideHeading.setText(slide_headings[position]);
+        slideDescription.setText(slide_descs[position]);
 
         container.addView(view);
 
@@ -58,7 +68,7 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public void  destroyItem(ViewGroup container, int position, Object object){
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((RelativeLayout)object);
     }
 }

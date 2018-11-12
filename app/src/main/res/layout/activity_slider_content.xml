@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/slide_image"
@@ -9,24 +11,33 @@
         android:layout_height="130dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="128dp"
         app:srcCompat="@drawable/ic_toko_cookies" />
 
     <TextView
         android:id="@+id/slide_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="213dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/slide_desc"
-        android:layout_width="wrap_content"
+        android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="243dp"
-        android:text="TextView" />
+        android:layout_marginBottom="248dp"
+        android:fontFamily="@font/bubblegum_sans"
+        android:text="Goodbye Heavy Wallet"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/slide_desc"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="162dp"
+        android:fontFamily="@font/bubblegum_sans"
+        android:text="Don't need to count money when paying, don't need to wait for change"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 </RelativeLayout>

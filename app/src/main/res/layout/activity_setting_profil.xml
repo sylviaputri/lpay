@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:paddingTop="12dp"
-                android:text="Password"
+                android:text="Edit Profile"
                 android:textAlignment="inherit"
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="18sp" />
@@ -46,58 +46,66 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Current Password"
+                android:layout_marginTop="10dp"
+                android:text="Name"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtPasswordCurrent"
+                android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:hint="Enter Your Name"
+                android:inputType="textPersonName"
+                android:text="Zefanya David Santoso" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="New Password"
+                android:text="Email"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtPasswordNew"
+                android:id="@+id/editText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:hint="Enter Your Email"
+                android:inputType="textEmailAddress"
+                android:text="zefanya.david@ti.ukdw.ac.id" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Re-Enter New Password"
+                android:text="Phone Number"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtPasswordNew2"
+                android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:hint="Enter Your Phone Number"
+                android:inputType="phone"
+                android:text="+62 82255347877" />
+
         </LinearLayout>
 
         <RelativeLayout

@@ -30,7 +30,7 @@
             android:textSize="18sp"
             android:visibility="visible"
             tools:layout_marginLeft="30dp"
-            tools:textColor="#ffffff" />
+            tools:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/txtHomeSaldo"

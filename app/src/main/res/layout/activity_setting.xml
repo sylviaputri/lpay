@@ -195,8 +195,6 @@
         </LinearLayout>
     </ScrollView>
 
-<<<<<<< HEAD
-=======
     <Button
         android:id="@+id/btnSettingLogout"
         android:layout_width="150dp"

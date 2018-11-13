@@ -221,13 +221,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.868" />
 
->>>>>>> master
     <LinearLayout
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:background="@color/colorPrimary"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -235,30 +234,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
-            android:id="@+id/imgNavSettingHome"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_home_white_24dp" />
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imgNavSettingHistory"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_history_white_24dp" />
+            <ImageView
+                android:id="@+id/imgNavHomeHome"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home_white_24dp" />
 
-        <ImageView
-            android:id="@+id/imgNavSettingSetting"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
+            <ImageView
+                android:id="@+id/imgNavHomeHistory"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_history_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgNavHomeSetting"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_settings_white_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_settings_white_24dp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtHomeHome"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtHomeHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="History"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtHomeSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Setting"
+                android:textAlignment="center" />
+        </LinearLayout>
 
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

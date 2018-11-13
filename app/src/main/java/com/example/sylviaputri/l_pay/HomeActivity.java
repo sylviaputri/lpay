@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
@@ -15,6 +16,10 @@ public class HomeActivity extends AppCompatActivity {
     public ImageButton btnHomeWithdraw;
     public ImageButton btnHomeScanQR;
     public ImageView imgNavHomeSetting;
+    public ImageView imgNavHomeHistory;
+    public TextView txtHomeHome;
+    public TextView txtHomeHistory;
+    public TextView txtHomeSetting;
 
     private static long back_pressed ;
 
@@ -27,6 +32,9 @@ public class HomeActivity extends AppCompatActivity {
         btnHomeWithdraw = (ImageButton)findViewById(R.id.btnHomeWithdraw);
         btnHomeScanQR = (ImageButton) findViewById(R.id.btnHomeScanQR);
         imgNavHomeSetting = (ImageView) findViewById(R.id.imgNavHomeSetting);
+        imgNavHomeHistory = (ImageView) findViewById(R.id.imgNavHomeHistory);
+        txtHomeSetting = (TextView) findViewById(R.id.txtHomeSetting);
+        txtHomeHistory = (TextView) findViewById(R.id.txtHomeHistory);
 
         btnHomeTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +60,30 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        imgNavHomeHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtHomeHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
         imgNavHomeSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+        txtHomeSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, SettingActivity.class);

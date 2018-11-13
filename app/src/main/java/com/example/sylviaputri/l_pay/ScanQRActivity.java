@@ -2,6 +2,7 @@ package com.example.sylviaputri.l_pay;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
@@ -35,6 +37,14 @@ public class ScanQRActivity extends AppCompatActivity {
 
         surfaceView = (SurfaceView) findViewById(R.id.camerapreview);
         txtScanHasilScan = (TextView) findViewById(R.id.txtScanHasilScan);
+
+        txtScanHasilScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ScanQRActivity.this, PaymentConfirmationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         barcodeDetector = new BarcodeDetector.Builder(this).setBarcodeFormats(Barcode.QR_CODE).build();
         cameraSource = new CameraSource.Builder(this, barcodeDetector).setRequestedPreviewSize(640, 480).build();

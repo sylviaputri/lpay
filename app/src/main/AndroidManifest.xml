@@ -27,6 +27,8 @@
         <activity android:name=".TopupActivity" />
         <activity android:name=".WithdrawActivity" />
         <activity android:name=".SettingActivity" />
+        <activity android:name=".PaymentConfirmationActivity" />
+        <activity android:name=".EnterPinActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

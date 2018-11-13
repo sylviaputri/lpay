@@ -63,7 +63,7 @@
                 android:hint="Phone Number"
                 android:inputType="phone"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorHint="@color/cardview_shadow_start_color"
                 android:textColorLink="@color/colorWhite" />
@@ -85,7 +85,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorHint="@color/cardview_shadow_start_color"
                 android:textColorLink="@color/colorWhite" />

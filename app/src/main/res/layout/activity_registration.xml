@@ -133,7 +133,7 @@
                 android:hint="Name"
                 android:inputType="textPersonName"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorLink="@color/colorWhite" />
 
@@ -154,7 +154,7 @@
                 android:hint="Phone number"
                 android:inputType="phone"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorLink="@color/colorWhite" />
 
@@ -175,7 +175,7 @@
                 android:hint="e-Mail"
                 android:inputType="textEmailAddress"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorLink="@color/colorWhite" />
 
@@ -196,7 +196,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:shadowColor="@color/colorWhite"
-                android:textColor="@color/colorWhite"
+                android:textColor="@android:color/black"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorLink="@color/colorWhite" />
 

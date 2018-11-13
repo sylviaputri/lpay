@@ -195,8 +195,6 @@
         </LinearLayout>
     </ScrollView>
 
-<<<<<<< HEAD
-=======
     <Button
         android:id="@+id/btnSettingLogout"
         android:layout_width="150dp"
@@ -241,7 +239,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imgNavHomeHome"
+                android:id="@+id/imgNavSettingHome"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -249,7 +247,7 @@
                 app:srcCompat="@drawable/ic_home_white_24dp" />
 
             <ImageView
-                android:id="@+id/imgNavHomeHistory"
+                android:id="@+id/imgNavSettingHistory"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -257,7 +255,7 @@
                 app:srcCompat="@drawable/ic_history_white_24dp" />
 
             <ImageView
-                android:id="@+id/imgNavHomeSetting"
+                android:id="@+id/imgNavSettingSetting"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

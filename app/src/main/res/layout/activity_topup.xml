@@ -21,7 +21,7 @@
                 android:id="@+id/btnTopUpBack"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
             <TextView
@@ -59,32 +59,6 @@
             android:visibility="visible"
             android:background="#AAA"
             android:layout_marginTop="15dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="30dp" >
-
-            <EditText
-                android:id="@+id/edtTxtTopUpAmount"
-                android:layout_width="341dp"
-                android:layout_height="57dp"
-                android:ems="10"
-                android:inputType="number"
-                android:lines="@android:integer/config_longAnimTime"
-                android:hint="Enter Top Up Amount"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/txtTopUpMinimal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Minimal top up Rp 50.000,00"
-                android:textStyle="italic" />
-        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

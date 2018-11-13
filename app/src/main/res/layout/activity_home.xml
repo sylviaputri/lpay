@@ -8,39 +8,42 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="364dp"
-        android:layout_height="138dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="340dp"
+        android:layout_height="202dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_shape_border_purple"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnHomeProfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.167">
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/txtHomeTextSaldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="90dp"
             android:text="Saldo"
             android:textSize="18sp"
             android:visibility="visible"
             tools:layout_marginLeft="30dp"
-            tools:textColor="#ffffff" />
+            tools:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/txtHomeSaldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="120dp"
+            tools:layout_marginLeft="30dp"
             android:text="Rp 536.000,00"
+            android:textColor="@color/colorLightOrange"
             android:textSize="30sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="242dp"
             tools:textColor="@color/colorLightOrange" />
+
     </FrameLayout>
 
     <ImageView
@@ -54,8 +57,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_lpay" />
+        app:layout_constraintVertical_bias="0.033"
+        app:srcCompat="@drawable/ic_lpay_new" />
 
     <LinearLayout
         android:id="@+id/navigation"

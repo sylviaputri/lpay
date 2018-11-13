@@ -46,12 +46,12 @@ public class SliderActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(btnNext.getText().toString()=="Next"){
-                    mSlideViewPager.setCurrentItem(mCurrentPage + 1);
-                }
-                else if(btnNext.getText().toString()=="Start"){
+                if(btnNext.getText().toString()=="Start"){
                     Intent homeIntent = new Intent(SliderActivity.this, RegistrationActivity.class);
                     startActivity(homeIntent);
+                }
+                else{
+                    mSlideViewPager.setCurrentItem(mCurrentPage + 1);
                 }
             }
         });

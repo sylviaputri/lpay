@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
     public Button btnRegisRegister;
     public Button btnRegisLogin;
+
+    private static long back_pressed ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +36,19 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis()){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.addFlags((Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            startActivity(intent);
+            finish();
+        } else{
+            Toast.makeText(this, "Press once again to exit",Toast.LENGTH_SHORT).show();
+        }
+        back_pressed = System.currentTimeMillis();
     }
 }

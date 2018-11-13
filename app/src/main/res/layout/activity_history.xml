@@ -241,5 +241,29 @@
                 android:textAlignment="center" />
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/imgNavHomeHome"
+            android:layout_width="75dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_home_white_24dp" />
+
+        <ImageView
+            android:id="@+id/imgNavHomeHistory"
+            android:layout_width="75dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_history_white_24dp" />
+
+        <ImageView
+            android:id="@+id/imgNavHomeSetting"
+            android:layout_width="75dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_settings_white_24dp" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

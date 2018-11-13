@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sylviaputri.l_pay">
 
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,14 +19,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".IntroSliderActivity"></activity>
-        <activity android:name=".RegistrationActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".TopupActivity" />
+        <activity android:name=".WithdrawActivity" />
+        <activity android:name=".SettingActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode"></meta-data>
+
+        <activity android:name=".SliderActivity" />
+        <activity android:name=".ScanQRActivity"></activity>
     </application>
 
 </manifest>

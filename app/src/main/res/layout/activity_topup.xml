@@ -18,7 +18,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btnWithDrawBack"
+                android:id="@+id/btnTopUpBack"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -75,14 +75,14 @@
                 android:ems="10"
                 android:inputType="number"
                 android:lines="@android:integer/config_longAnimTime"
-                android:text="Enter Top Up Amount"
+                android:hint="Enter Top Up Amount"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/txtTopUpMinimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Minimal saldo Rp 50.000,00"
+                android:text="Minimal top up Rp 50.000,00"
                 android:textStyle="italic" />
         </LinearLayout>
       

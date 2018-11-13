@@ -47,7 +47,7 @@
             android:id="@+id/txtTopUpSaldo"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:text="Rp 5.000.0000,00"
+            android:text="Rp 536.0000,00"
             android:textAlignment="center"
             android:textColor="@color/colorLightOrange"
             android:textSize="24sp"
@@ -85,21 +85,21 @@
                 android:text="Minimal top up Rp 50.000,00"
                 android:textStyle="italic" />
         </LinearLayout>
-      
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:visibility="visible"
             android:background="#AAA" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="20dp"
-        android:paddingTop="15dp"
-        android:orientation="vertical"
-        android:background="@color/colorGrey">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:background="@color/colorGrey">
 
             <TextView
                 android:id="@+id/txtTopUpPayment"

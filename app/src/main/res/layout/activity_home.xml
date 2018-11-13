@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/btnNavHomeHome"
+            android:id="@+id/imgNavHomeHome"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -79,7 +79,7 @@
             app:srcCompat="@drawable/ic_home_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavHistoryHome"
+            android:id="@+id/imgNavHomeHistory"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -87,7 +87,7 @@
             app:srcCompat="@drawable/ic_history_white_24dp" />
 
         <ImageView
-            android:id="@+id/btnNavSettingHome"
+            android:id="@+id/imgNavHomeSetting"
             android:layout_width="75dp"
             android:layout_height="34dp"
             android:layout_marginTop="10dp"
@@ -100,10 +100,10 @@
         android:id="@+id/btnHomeWithdraw"
         android:layout_width="73dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="?attr/actionBarDivider"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,13 +115,13 @@
         app:srcCompat="@drawable/round_icon" />
 
     <ImageButton
-        android:id="@+id/btnHomeMyQR"
+        android:id="@+id/btnHomeScanQR"
         android:layout_width="73dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="?attr/actionBarDivider"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,10 +136,10 @@
         android:id="@+id/btnHomeTopUp"
         android:layout_width="73dp"
         android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="?attr/actionBarDivider"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -233,14 +233,14 @@
         app:srcCompat="@android:color/transparent" />
 
     <TextView
-        android:id="@+id/txtHomeMyQR"
+        android:id="@+id/txtHomeScanQR"
         android:layout_width="73dp"
         android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="My QR"
+        android:text="Scan QR"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -305,6 +305,23 @@
 
     <ImageView
         android:id="@+id/imageView9"
+        android:layout_width="75dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603"
+        app:srcCompat="@drawable/ic_menu_scan_qr" />
+
+    <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"

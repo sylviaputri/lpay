@@ -27,8 +27,8 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="363dp"
-        android:layout_height="462dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

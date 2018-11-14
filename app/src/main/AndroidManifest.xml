@@ -29,6 +29,9 @@
         <activity android:name=".SettingActivity" />
         <activity android:name=".PaymentConfirmationActivity" />
         <activity android:name=".EnterPinActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".SettingPasswordActivity" />
+        <activity android:name=".SettingProfilActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -6,45 +6,85 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="340dp"
-        android:layout_height="202dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/round_shape_border_purple"
-        app:layout_constraintBottom_toTopOf="@+id/btnHomeProfil"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/txtHomeTextSaldo"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/btnHomeProfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/txtHomeTextSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:text="Saldo"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/txtHomeSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="135dp"
+                android:text="Rp 536.000,00"
+                android:textAlignment="center"
+                android:textColor="@color/colorLightOrange"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="242dp"
+                tools:textColor="@color/colorLightOrange" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:text="Saldo"
-            android:textSize="18sp"
-            android:visibility="visible"
-            tools:layout_marginLeft="30dp"
-            tools:textColor="@color/colorPrimaryDark" />
+            android:background="@color/colorGrey"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
 
-        <TextView
-            android:id="@+id/txtHomeSaldo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            tools:layout_marginLeft="30dp"
-            android:text="Rp 536.000,00"
-            android:textColor="@color/colorLightOrange"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="242dp"
-            tools:textColor="@color/colorLightOrange" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Zefanya David Santoso" />
 
-    </FrameLayout>
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="+62 82255278282" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="zefanya.david@ti.ukdw.ac.id" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
@@ -65,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:background="@color/colorPrimary"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,36 +113,74 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
-            android:id="@+id/imgNavHomeHome"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_home_white_24dp" />
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imgNavHomeHistory"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_history_white_24dp" />
+            <ImageView
+                android:id="@+id/imgNavHomeHome"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home_white_24dp" />
 
-        <ImageView
-            android:id="@+id/imgNavHomeSetting"
-            android:layout_width="75dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="10dp"
+            <ImageView
+                android:id="@+id/imgNavHomeHistory"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_history_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgNavHomeSetting"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_settings_white_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_settings_white_24dp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtHomeHome"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtHomeHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="History"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtHomeSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Setting"
+                android:textAlignment="center" />
+        </LinearLayout>
 
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/btnHomeWithdraw"
-        android:layout_width="73dp"
-        android:layout_height="75dp"
+        android:layout_width="67dp"
+        android:layout_height="68dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -114,13 +192,13 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609"
+        app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/round_icon" />
 
     <ImageButton
         android:id="@+id/btnHomeScanQR"
-        android:layout_width="73dp"
-        android:layout_height="75dp"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -129,16 +207,16 @@
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609"
+        app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/round_icon" />
 
     <ImageButton
         android:id="@+id/btnHomeTopUp"
-        android:layout_width="73dp"
-        android:layout_height="75dp"
+        android:layout_width="67dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -150,94 +228,12 @@
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609"
+        app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/round_icon" />
-
-    <ImageView
-        android:id="@+id/txtHomeFoto"
-        android:layout_width="63dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/ic_launcher_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452"
-        app:srcCompat="?attr/actionBarDivider" />
-
-    <TextView
-        android:id="@+id/txtHomeNama"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Zefanya David Santoso"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
-
-    <TextView
-        android:id="@+id/txtHomeEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="zefanyadavid0203@gmail.com"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
-
-    <TextView
-        android:id="@+id/txtHomeNomorTelp"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="082136787937"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.327"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.489" />
-
-    <ImageButton
-        android:id="@+id/btnHomeProfil"
-        android:layout_width="362dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="8dp"
-        android:background="?attr/colorControlHighlight"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423"
-        app:srcCompat="@android:color/transparent" />
 
     <TextView
         android:id="@+id/txtHomeScanQR"
-        android:layout_width="73dp"
+        android:layout_width="69dp"
         android:layout_height="18dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -251,16 +247,16 @@
         app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.707" />
 
     <TextView
         android:id="@+id/txtHomeWithdraw"
-        android:layout_width="71dp"
+        android:layout_width="67dp"
         android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Withdraw"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -269,11 +265,11 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.707" />
 
     <TextView
         android:id="@+id/txtHomeTopUp"
-        android:layout_width="71dp"
+        android:layout_width="66dp"
         android:layout_height="18dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -287,12 +283,12 @@
         app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.707" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="73dp"
-        android:layout_height="53dp"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -300,16 +296,16 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608"
+        app:layout_constraintVertical_bias="0.632"
         app:srcCompat="@drawable/ic_topup_white" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="75dp"
-        android:layout_height="54dp"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
         android:layout_marginBottom="3dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -317,10 +313,10 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603"
+        app:layout_constraintVertical_bias="0.627"
         app:srcCompat="@drawable/ic_menu_scan_qr" />
 
     <ImageView
@@ -337,7 +333,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608"
+        app:layout_constraintVertical_bias="0.632"
         app:srcCompat="@drawable/ic_withdraw_white" />
 
 </android.support.constraint.ConstraintLayout>

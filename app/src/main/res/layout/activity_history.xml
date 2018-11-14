@@ -146,7 +146,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
-                        android:text="09 Nov, 06:04 pm" />
+                        android:text="090 Nov, 06:04 pm" />
                 </LinearLayout>
             </LinearLayout>
 

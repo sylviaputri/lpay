@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class EnterPinActivity extends AppCompatActivity {
+    public ImageButton btnEnterPinBack;
 
     public ImageView btnEnterpinOk;
     public ImageView btnEnterpinDelete;
@@ -30,6 +32,16 @@ public class EnterPinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enterpin);
+
+        btnEnterPinBack = (ImageButton) findViewById(R.id.btnEnterPinBack);
+
+        btnEnterPinBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EnterPinActivity.this, PaymentConfirmationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnEnterpinOk = (ImageView) findViewById(R.id.btnEnterpinOk);
         btnEnterpinDelete = (ImageView) findViewById(R.id.btnEnterpinDelete);

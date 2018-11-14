@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<<<<<<< HEAD
+=======
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -30,11 +32,12 @@
             android:textSize="18sp" />
     </LinearLayout>
 
+>>>>>>> master
     <TextView
         android:id="@+id/txtEnterpinTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="200dp"
         android:padding="10dp"
         android:text="Enter PIN"
         android:textAlignment="center"
@@ -55,20 +58,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnEnterpin1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="1"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -76,13 +79,13 @@
             android:id="@+id/btnEnterpin2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="2"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -90,14 +93,14 @@
             android:id="@+id/btnEnterpin3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="3"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -111,28 +114,27 @@
             android:id="@+id/btnEnterpin4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:textColor="@color/colorWhite"
             android:background="@drawable/my_button_purple"
             android:text="4"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnEnterpin5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="5"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -140,14 +142,14 @@
             android:id="@+id/btnEnterpin6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="6"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -161,13 +163,13 @@
             android:id="@+id/btnEnterpin7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="7"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -175,13 +177,13 @@
             android:id="@+id/btnEnterpin8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="8"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -189,14 +191,14 @@
             android:id="@+id/btnEnterpin9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
-            android:textColor="@color/colorWhite"
             android:text="9"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -221,9 +223,9 @@
             android:id="@+id/btnEnterpin0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="@drawable/my_button_purple"
             android:text="0"

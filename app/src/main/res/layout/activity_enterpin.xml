@@ -13,14 +13,14 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/btnWithDrawBack"
+            android:id="@+id/btnEnterPinBack"
             android:layout_width="48dp"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <TextView
-            android:id="@+id/txtWithDrawTitle"
+            android:id="@+id/txtEnterPinTitle"
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:paddingTop="12dp"

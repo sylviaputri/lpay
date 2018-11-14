@@ -165,7 +165,7 @@
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Complete" />
+                        android:text="Rp 25000" />
 
                     <TextView
                         android:id="@+id/textView19"
@@ -222,7 +222,7 @@
                         android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Complete" />
+                        android:text="Rp92000" />
 
                     <TextView
                         android:id="@+id/textView18"

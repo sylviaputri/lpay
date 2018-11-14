@@ -30,9 +30,9 @@ public class WithdrawActivity extends AppCompatActivity {
         btnWithdrawWithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WithdrawActivity.this, HomeActivity.class);
+                Intent intent = new Intent(WithdrawActivity.this, EnterPinActivity.class);
                 startActivity(intent);
-            }
-        });
+    }
+});
     }
 }

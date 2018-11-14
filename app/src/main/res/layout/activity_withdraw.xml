@@ -176,32 +176,23 @@
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_payment_rightarrow" />
             </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/btnWithdrawSubmit"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:background="@color/colorPrimaryDark"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            android:layout_height="match_parent"
+            android:gravity="bottom">
 
-
-            <TextView
-                android:id="@+id/btnWithdrawText"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btnWithdrawWithdraw"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:text="withdraw"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="@color/colorWhite"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:background="@color/colorPrimaryDark"
+                android:text="WITHDRAW"
+                android:textColor="@color/cardview_light_background" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

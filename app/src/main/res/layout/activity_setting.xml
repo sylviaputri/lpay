@@ -7,7 +7,7 @@
     android:background="@color/colorWhite">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayoutHistory"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal">
@@ -22,34 +22,30 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
-    </LinearLayout>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginBottom="5dp"
-        android:background="#AAA"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="match_parent"
-        android:layout_height="459dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="363dp"
+        android:layout_height="462dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHistory">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AAA"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="48dp" />
 
             <TextView
                 android:id="@+id/TxtSettingAccount"
@@ -96,6 +92,7 @@
                 android:textAllCaps="false" />
 
             <View
+                android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#AAA"
@@ -190,7 +187,7 @@
                 tools:layout_editor_absoluteY="48dp" />
 
             <Button
-                android:id="@+id/btnLogOut"
+                android:id="@+id/btnSettingLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -205,30 +202,6 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btnSettingLogout"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimaryDark"
-        android:bottomLeftRadius="10dp"
-        android:bottomRightRadius="10dp"
-        android:text="Log Out"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/cardview_light_background"
-        android:textStyle="bold"
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
 
     <LinearLayout
         android:id="@+id/navigation"

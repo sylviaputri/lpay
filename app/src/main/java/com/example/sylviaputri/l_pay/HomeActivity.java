@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         btnHomeScanQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, ScanQRActivity.class);
+                Intent intent = new Intent(HomeActivity.this, PaymentConfirmationActivity.class);
                 startActivity(intent);
             }
         });

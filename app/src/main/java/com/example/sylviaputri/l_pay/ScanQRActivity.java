@@ -22,6 +22,7 @@ import java.io.IOException;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanQRActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+    public static String hasilScan;
 
     ZXingScannerView ScannerView;
 
@@ -34,8 +35,11 @@ public class ScanQRActivity extends AppCompatActivity implements ZXingScannerVie
 
     @Override
     public void handleResult(Result result) {
-        PaymentConfirmationActivity.txtKonfirmasiHarga.setText(result.getText());
-        onBackPressed();
+        hasilScan = result.getText();
+        //PaymentConfirmationActivity.txtKonfirmasiHarga.setText(result.getText());
+        //onBackPressed();
+        Intent intent = new Intent(ScanQRActivity.this, PaymentConfirmationActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -50,4 +54,5 @@ public class ScanQRActivity extends AppCompatActivity implements ZXingScannerVie
         ScannerView.setResultHandler(this);
         ScannerView.startCamera();
     }
+
 }

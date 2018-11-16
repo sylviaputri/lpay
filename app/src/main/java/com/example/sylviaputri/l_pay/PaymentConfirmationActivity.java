@@ -13,7 +13,7 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
     public Button btnPaymentConfCancel;
     public Button btnPaymentConfMakePayment;
 
-    public static TextView txtKonfirmasiHarga;
+    public TextView txtKonfirmasiHarga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,7 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
         btnPaymentConfMakePayment = (Button) findViewById(R.id.btnPaymentConfMakePayment);
 
         txtKonfirmasiHarga = (TextView) findViewById(R.id.txtKonfirmasiHarga);
-
-        startActivity(new Intent(getApplicationContext(), ScanQRActivity.class));
+        txtKonfirmasiHarga.setText(ScanQRActivity.hasilScan);
 
         btnPaymentConfCancel.setOnClickListener(new View.OnClickListener() {
             @Override

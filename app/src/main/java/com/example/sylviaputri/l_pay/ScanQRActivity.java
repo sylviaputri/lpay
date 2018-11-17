@@ -13,91 +13,46 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
-
-import com.google.android.gms.vision.CameraSource;
-import com.google.android.gms.vision.Detector;
-import com.google.android.gms.vision.barcode.Barcode;
-import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.zxing.Result;
 
 import org.w3c.dom.Text;
 
 import java.io.IOException;
 
-public class ScanQRActivity extends AppCompatActivity {
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-    SurfaceView surfaceView;
-    CameraSource cameraSource;
-    TextView txtScanHasilScan;
-    BarcodeDetector barcodeDetector;
+public class ScanQRActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+    public static String hasilScan;
+
+    ZXingScannerView ScannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan_qr);
-
-        surfaceView = (SurfaceView) findViewById(R.id.camerapreview);
-        txtScanHasilScan = (TextView) findViewById(R.id.txtScanHasilScan);
-
-        txtScanHasilScan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ScanQRActivity.this, PaymentConfirmationActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        barcodeDetector = new BarcodeDetector.Builder(this).setBarcodeFormats(Barcode.QR_CODE).build();
-        cameraSource = new CameraSource.Builder(this, barcodeDetector).setRequestedPreviewSize(640, 480).build();
-
-        surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(SurfaceHolder surfaceHolder) {
-                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-
-                    return;
-                }
-                try{
-                    cameraSource.start(surfaceHolder);
-                }catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
-
-                cameraSource.stop();
-            }
-
-            @Override
-            public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-
-            }
-        });
-
-        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
-            @Override
-            public void release() {
-
-            }
-
-            @Override
-            public void receiveDetections(Detector.Detections<Barcode> detections) {
-                final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
-
-                if(qrCodes.size() != 0)
-                {
-                    txtScanHasilScan.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-                            vibrator.vibrate(1000);
-                            txtScanHasilScan.setText(qrCodes.valueAt(0).displayValue);
-                        }
-                    });
-                }
-            }
-        });
+        ScannerView = new ZXingScannerView(this);
+        setContentView(ScannerView);
     }
+
+    @Override
+    public void handleResult(Result result) {
+        hasilScan = result.getText();
+        //PaymentConfirmationActivity.txtKonfirmasiHarga.setText(result.getText());
+        //onBackPressed();
+        Intent intent = new Intent(ScanQRActivity.this, PaymentConfirmationActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ScannerView.stopCamera();
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        ScannerView.setResultHandler(this);
+        ScannerView.startCamera();
+    }
+
 }

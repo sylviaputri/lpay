@@ -32,6 +32,7 @@
         <activity android:name=".HistoryActivity" />
         <activity android:name=".SettingPasswordActivity" />
         <activity android:name=".SettingProfilActivity" />
+        <activity android:name=".VerificationNumberActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -42,6 +43,7 @@
 
         <activity android:name=".SliderActivity" />
         <activity android:name=".ScanQRActivity" />
+        <activity android:name=".FinishingRegistrationActivity" />
     </application>
 
 </manifest>

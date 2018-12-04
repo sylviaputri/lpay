@@ -12,24 +12,24 @@ import com.example.sylviaputri.l_pay.Model.History;
 
 import java.util.List;
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryHolder> {
+public class HistoryAdapter2 extends RecyclerView<HistoryAdapter2.HistoryHolder> {
     private List<History> listHistory;
     private Context mContext;//supaya FilmAdapter tau activity apa yang mau pake dia
 
-    public HistoryAdapter(List<History> listHistory, Context mContext){
+    public HistoryAdapter2(List<History> listHistory, Context mContext){
         this.listHistory = listHistory;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public HistoryAdapter.HistoryHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public HistoryAdapter2.HistoryHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_history, viewGroup,false);
-        return new HistoryAdapter.HistoryHolder(itemView);
+        return new HistoryHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HistoryAdapter.HistoryHolder historyHolder, int i) {
+    public void onBindViewHolder(@NonNull HistoryAdapter2.HistoryHolder historyHolder, int i) {
         History history = listHistory.get(i);
         historyHolder.txtHarga.setText("Rp "+history.harga);
         historyHolder.txtTanggal.setText(history.tglTransaksi);

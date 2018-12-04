@@ -39,6 +39,7 @@ public class ScanQRActivity extends AppCompatActivity implements ZXingScannerVie
         //PaymentConfirmationActivity.txtKonfirmasiHarga.setText(result.getText());
         //onBackPressed();
         Intent intent = new Intent(ScanQRActivity.this, PaymentConfirmationActivity.class);
+        intent.putExtra("idTransaksi", hasilScan);
         startActivity(intent);
     }
 

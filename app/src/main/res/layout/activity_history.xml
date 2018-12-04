@@ -165,7 +165,7 @@
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rp 25000" />
+                        android:text="Rp 25.000,00" />
 
                     <TextView
                         android:id="@+id/textView19"
@@ -222,14 +222,14 @@
                         android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rp92000" />
+                        android:text="Rp 92.000,00" />
 
                     <TextView
                         android:id="@+id/textView18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
-                        android:text="090 Nov, 06:04 pm" />
+                        android:text="09 Nov, 06:04 pm" />
                 </LinearLayout>
             </LinearLayout>
 

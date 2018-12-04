@@ -33,6 +33,8 @@ public class VerificationNumberActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("ListPhoneUser");
+    private DatabaseReference mDatabase1 = FirebaseDatabase.getInstance().getReference("ListPhone");
 
     String storeName;
     String storeEmail;
@@ -41,6 +43,12 @@ public class VerificationNumberActivity extends AppCompatActivity {
     String from;
 
     public ProgressDialog progressDialog;
+
+
+    private void writeNewUser(String number){
+        mDatabase.child(number).setValue(true);
+        mDatabase1.child(number).setValue(true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,9 +166,11 @@ public class VerificationNumberActivity extends AppCompatActivity {
                                                                                         User user = new User(0.0,"123456", storePassword);
                                                                                         mDatabase.child("User").child(mAuth.getCurrentUser().getUid()).setValue(user);
 
+                                                                                        writeNewUser(mAuth.getCurrentUser().getPhoneNumber());
 
                                                                                         Intent intent = new Intent(VerificationNumberActivity.this, HomeActivity.class);
                                                                                         startActivity(intent);
+
 
 //                                                                                        Password pass = new Password(storePassword);
 //

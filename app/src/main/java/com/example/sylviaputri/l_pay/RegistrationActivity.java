@@ -73,16 +73,16 @@ public class RegistrationActivity extends AppCompatActivity {
     private Boolean isUserExist(String number){
         Boolean cek = false;
         try {
-            cek = hm.get(number);
+            if(hm.get(number)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }catch (Exception e){
             return false;
         }
-        if(cek){
-            return true;
-        }
-        else{
-            return false;
-        }
+
 
     }
 

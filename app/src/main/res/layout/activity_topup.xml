@@ -76,246 +76,34 @@
             android:background="@color/colorGrey">
 
             <TextView
-                android:id="@+id/txtTopUpPayment"
-                android:layout_width="342dp"
+                android:id="@+id/txtTopUpTransfer"
+                android:layout_width="371dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Select Payment"
+                android:text="Select Bank Transfer"
+                android:textSize="18sp" />
+            <Spinner
+                android:id="@+id/spinnerTopUpBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+
+            <TextView
+                android:id="@+id/txtTopUpInstruksi"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text=""
                 android:textSize="18sp" />
 
-            <!--Layout untuk bank BCA-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_bca" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="BCA"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
-
-            <!--Layout untuk bank MANDIRI-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_mandiri" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="MANDIRI"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
-
-            <!--Layout untuk bank BNI-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_bni" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="BNI"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
-
-            <!--Layout untuk bank CIMB NIAGA-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_cimb" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="CIMB NIAGA"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
-
-            <!--Layout untuk bank BRI-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_bri" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="BRI"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
-
-            <!--Layout untuk bank BNI-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/my_button_white"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="14dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_permata" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="210dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="PERMATA BANK"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_payment_rightarrow" />
-            </LinearLayout>
 
         </LinearLayout>
 

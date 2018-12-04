@@ -26,17 +26,13 @@ public class HistoryFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_history, container, false);
 
         ViewPager viewPager = (ViewPager) v.findViewById(R.id.viewPager1);
-        setupViewPager(viewPager);
+
+        
         // Set Tabs inside Toolbar
         TabLayout tabs = (TabLayout) v.findViewById(R.id.tabLayout);
         tabs.setupWithViewPager(viewPager);
         return v;
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        TabAdapter adapter = new TabAdapter(getChildFragmentManager());
-        adapter.addFragment(new HistoryJualBeliFragment(), "Jual Beli");
-        adapter.addFragment(new HistoryWithdrawFragment(), "Withdraw");
-        viewPager.setAdapter(adapter);
-    }
+
 }

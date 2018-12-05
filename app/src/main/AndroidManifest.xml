@@ -43,7 +43,6 @@
 
         <activity android:name=".SliderActivity" />
         <activity android:name=".ScanQRActivity" />
-        <activity android:name=".FinishingRegistrationActivity" />
     </application>
 
 </manifest>

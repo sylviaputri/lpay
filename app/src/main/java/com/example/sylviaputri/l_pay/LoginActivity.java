@@ -222,6 +222,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
+            progressDialog.dismiss();
             code = s;
             Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
             intent.putExtra("context","login");

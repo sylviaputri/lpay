@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.sylviaputri.l_pay.Model.TransaksiJualBeli;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +26,8 @@ import com.google.firebase.storage.StorageReference;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -33,7 +37,10 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
 
     public TextView txtKonfirmasiHarga;
     public TextView txtKonfirmasiNamaPenjual;
+    public TextView txtImageToko;
+    public TextView txtPaymentConfSaldo;
     ValueEventListener valueEvent;
+    DatabaseReference mUser;
 
     private TransaksiJualBeli transaksiJualBeli;
 
@@ -41,6 +48,9 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
     String idTransaksi;
     FirebaseDatabase database =  FirebaseDatabase.getInstance();
     private DatabaseReference mDatabase;
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private FirebaseUser curUser = mAuth.getCurrentUser();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +60,14 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
         intent = getIntent();
         idTransaksi = intent.getStringExtra("idTransaksi");
         mDatabase = database.getReference().child("transaksi").child("dummy").child(idTransaksi);
+        mUser = database.getReference().child("User").child(curUser.getUid()).child("saldo");
 
         btnPaymentConfCancel = (Button) findViewById(R.id.btnPaymentConfCancel);
         btnPaymentConfMakePayment = (Button) findViewById(R.id.btnPaymentConfMakePayment);
         txtKonfirmasiNamaPenjual = (TextView) findViewById(R.id.txtKonfirmasiNamaPenjual);
         txtKonfirmasiHarga = (TextView) findViewById(R.id.txtKonfirmasiHarga);
+        txtImageToko = (TextView) findViewById(R.id.txtImageToko);
+        txtPaymentConfSaldo = (TextView) findViewById(R.id.txtPaymentConfSaldo);
 
         btnPaymentConfCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +80,20 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
         btnPaymentConfMakePayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SimpleDateFormat simpledateformat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");;
+                String waktu = simpledateformat.format(Calendar.getInstance().getTime());
+                mDatabase.child("waktu").setValue(waktu);
+                mDatabase.child("telp_pembeli").setValue(curUser.getPhoneNumber());
+
+                DatabaseReference mTransJualBeli = database.getReference().child("transaksi").child("pembeli").child("jualBeli").child(curUser.getUid()).child(idTransaksi);
+                mTransJualBeli.child("image_toko").setValue(txtImageToko.getText().toString());
+                mTransJualBeli.child("nama_toko").setValue(txtKonfirmasiNamaPenjual.getText().toString());
+                mTransJualBeli.child("total").setValue((txtKonfirmasiHarga.getText().toString()).substring(3));
+                mTransJualBeli.child("waktu").setValue(waktu);
+                int saldo = Integer.valueOf((txtPaymentConfSaldo.getText().toString()).substring(19));
+                int totalBeli = Integer.valueOf((txtKonfirmasiHarga.getText().toString()).substring(3));
+                mUser.setValue(saldo-totalBeli);
+
                 Intent intent = new Intent(PaymentConfirmationActivity.this, EnterPinActivity.class);
                 startActivity(intent);
             }
@@ -80,6 +107,7 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
                 Long totalGetValue = (Long) dataSnapshot.child("total").getValue();
                 txtKonfirmasiNamaPenjual.setText(nama_tokoGetValue);
                 txtKonfirmasiHarga.setText("Rp " + totalGetValue.toString());
+                txtImageToko.setText(image_tokoGetValue);
 
                 final long ONE_MEGABYTE = 1024 * 1024;
                 StorageReference ref = FirebaseStorage.getInstance().getReference();
@@ -91,6 +119,18 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
                         imgFoto.setImageBitmap(bitmap);
                     }
                 });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        mUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                txtPaymentConfSaldo.setText("Your ballance : Rp "+ dataSnapshot.getValue());
             }
 
             @Override

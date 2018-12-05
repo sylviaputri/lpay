@@ -2,6 +2,8 @@ package com.example.sylviaputri.l_pay;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -60,7 +62,17 @@ public class HistoryActivity extends AppCompatActivity {
             }
         });
 
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager1);
+        setupViewPager(viewPager);
+        // Set Tabs inside Toolbar
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabLayout);
+        tabs.setupWithViewPager(viewPager);
+    }
 
-
+    private void setupViewPager(ViewPager viewPager) {
+        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HistoryJualBeliFragment(), "Jual Beli");
+        adapter.addFragment(new HistoryWithdrawFragment(), "Withdraw");
+        viewPager.setAdapter(adapter);
     }
 }

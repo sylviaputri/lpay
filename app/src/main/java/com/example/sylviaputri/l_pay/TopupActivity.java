@@ -14,7 +14,7 @@ public class TopupActivity extends AppCompatActivity {
     public ImageButton btnTopUpBack;
     public Spinner dropdownBank;
     public String[] pilihanBank;
-    public TextView txtInstruksiTransfer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class TopupActivity extends AppCompatActivity {
             }
         });
 
-        dropdownBank = findViewById(R.id.spinnerWithdrawBank);
+        dropdownBank = findViewById(R.id.spinnerTopUpBank);
         pilihanBank = new String[]{"Choose Bank", "Bank BCA", "Bank BRI", "Bank BNI", "Bank Mandiri"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, pilihanBank);
         dropdownBank.setAdapter(adapter);

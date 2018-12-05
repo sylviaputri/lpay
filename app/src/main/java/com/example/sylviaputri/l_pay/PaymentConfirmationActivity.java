@@ -38,7 +38,9 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
     public TextView txtKonfirmasiHarga;
     public TextView txtKonfirmasiNamaPenjual;
     public TextView txtImageToko;
+    public TextView txtPaymentConfSaldo;
     ValueEventListener valueEvent;
+    DatabaseReference mUser;
 
     private TransaksiJualBeli transaksiJualBeli;
 
@@ -58,12 +60,14 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
         intent = getIntent();
         idTransaksi = intent.getStringExtra("idTransaksi");
         mDatabase = database.getReference().child("transaksi").child("dummy").child(idTransaksi);
+        mUser = database.getReference().child("User").child(curUser.getUid()).child("saldo");
 
         btnPaymentConfCancel = (Button) findViewById(R.id.btnPaymentConfCancel);
         btnPaymentConfMakePayment = (Button) findViewById(R.id.btnPaymentConfMakePayment);
         txtKonfirmasiNamaPenjual = (TextView) findViewById(R.id.txtKonfirmasiNamaPenjual);
         txtKonfirmasiHarga = (TextView) findViewById(R.id.txtKonfirmasiHarga);
         txtImageToko = (TextView) findViewById(R.id.txtImageToko);
+        txtPaymentConfSaldo = (TextView) findViewById(R.id.txtPaymentConfSaldo);
 
         btnPaymentConfCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +90,9 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
                 mTransJualBeli.child("nama_toko").setValue(txtKonfirmasiNamaPenjual.getText().toString());
                 mTransJualBeli.child("total").setValue((txtKonfirmasiHarga.getText().toString()).substring(3));
                 mTransJualBeli.child("waktu").setValue(waktu);
+                int saldo = Integer.valueOf((txtPaymentConfSaldo.getText().toString()).substring(19));
+                int totalBeli = Integer.valueOf((txtKonfirmasiHarga.getText().toString()).substring(3));
+                mUser.setValue(saldo-totalBeli);
 
                 Intent intent = new Intent(PaymentConfirmationActivity.this, EnterPinActivity.class);
                 startActivity(intent);
@@ -112,6 +119,18 @@ public class PaymentConfirmationActivity extends AppCompatActivity {
                         imgFoto.setImageBitmap(bitmap);
                     }
                 });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        mUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                txtPaymentConfSaldo.setText("Your ballance : Rp "+ dataSnapshot.getValue());
             }
 
             @Override

@@ -2,6 +2,7 @@ package com.example.sylviaputri.l_pay;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -59,8 +60,12 @@ public class HistoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-
-
+    private void setupViewPager(ViewPager viewPager) {
+        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HistoryJualBeliFragment(), "Jual Beli");
+        adapter.addFragment(new HistoryWithdrawFragment(), "Withdraw");
+        viewPager.setAdapter(adapter);
     }
 }

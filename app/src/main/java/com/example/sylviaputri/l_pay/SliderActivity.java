@@ -10,10 +10,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SliderActivity extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotsLayout;
+    private FirebaseUser user;
 
     private TextView[] mDots;
 
@@ -28,40 +32,47 @@ public class SliderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slider);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            Intent homeIntent = new Intent(SliderActivity.this, HomeActivity.class);
+            startActivity(homeIntent);
+        }
+        else{
+            mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
+            mDotsLayout = (LinearLayout) findViewById(R.id.dotsLayout);
 
+            btnNext = (Button) findViewById(R.id.btnNext);
+            btnPrev = (Button) findViewById(R.id.btnPrev);
 
-        mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
-        mDotsLayout = (LinearLayout) findViewById(R.id.dotsLayout);
+            sliderAdapter = new SliderAdapter(this);
+            mSlideViewPager.setAdapter(sliderAdapter);
 
-        btnNext = (Button) findViewById(R.id.btnNext);
-        btnPrev = (Button) findViewById(R.id.btnPrev);
+            addDotsIndicator(0);
 
-        sliderAdapter = new SliderAdapter(this);
-        mSlideViewPager.setAdapter(sliderAdapter);
+            mSlideViewPager.addOnPageChangeListener(viewListener);
 
-        addDotsIndicator(0);
-
-        mSlideViewPager.addOnPageChangeListener(viewListener);
-
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(btnNext.getText().toString()=="Start"){
-                    Intent homeIntent = new Intent(SliderActivity.this, RegistrationActivity.class);
-                    startActivity(homeIntent);
+            btnNext.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(btnNext.getText().toString()=="Start"){
+                        Intent homeIntent = new Intent(SliderActivity.this, RegistrationActivity.class);
+                        startActivity(homeIntent);
+                    }
+                    else{
+                        mSlideViewPager.setCurrentItem(mCurrentPage + 1);
+                    }
                 }
-                else{
-                    mSlideViewPager.setCurrentItem(mCurrentPage + 1);
-                }
-            }
-        });
+            });
 
-        btnPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mSlideViewPager.setCurrentItem(mCurrentPage - 1);
-            }
-        });
+            btnPrev.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mSlideViewPager.setCurrentItem(mCurrentPage - 1);
+                }
+            });
+        }
+
+
     }
 
     public void addDotsIndicator(int position){
